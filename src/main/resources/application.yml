@@ -1,3 +1,7 @@
 spring:
   application:
     name: spring-test
+
+app:
+  network:
+    url: http://localhost:8080/network
