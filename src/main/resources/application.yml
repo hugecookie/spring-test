@@ -2,7 +2,14 @@ spring:
   application:
     name: spring-test
   jpa:
-    open-in-view: false
+    open-in-view: false            # Q36: 트랜잭션 밖에서 지연 로딩하면 LazyInitializationException
+    properties:
+      hibernate:
+        generate_statistics: true  # 테스트에서 실행된 SQL 개수를 세기 위함 (N+1 확인)
+
+logging:
+  level:
+    org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: warn
 
 app:
   greeting: 안녕하세요
