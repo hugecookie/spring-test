@@ -18,6 +18,9 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-aop'        // 3. AOP
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'   // 4. 트랜잭션, 7. JPA / JdbcTemplate
+    runtimeOnly 'com.h2database:h2'
+    
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
