@@ -17,14 +17,16 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'        // 5. Spring MVC
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'    // 9. 리액티브 (Q42: MVC와 함께 있으면 MVC가 선택됨)
     implementation 'org.springframework.boot:spring-boot-starter-aop'        // 3. AOP
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'   // 4. 트랜잭션, 7. JPA / JdbcTemplate
     implementation 'org.springframework.boot:spring-boot-starter-security'   // 8. Spring Security
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     runtimeOnly 'com.h2database:h2'
-    
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'io.projectreactor:reactor-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
